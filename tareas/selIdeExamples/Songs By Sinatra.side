@@ -1,0 +1,531 @@
+{
+  "id": "bb9072f8-671b-4d3a-8c99-9ca1e6a37251",
+  "version": "2.0",
+  "name": "Songs By Sinatra",
+  "url": "https://evening-bastion-49392.herokuapp.com",
+  "tests": [{
+    "id": "8b193018-1550-4d67-9e00-86185ab5f88b",
+    "name": "login",
+    "commands": [{
+      "id": "461229b1-8202-412c-9e59-062963fc72a8",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "0742f7c5-1bf1-49a5-ab50-bbe05e7e6a46",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1280x680",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "eb31d605-4729-41e1-9461-3dfe1eefb732",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Home",
+      "targets": [
+        ["linkText=Home", "linkText"],
+        ["css=.current", "css:finder"],
+        ["xpath=//a[contains(text(),'Home')]", "xpath:link"],
+        ["xpath=//a[contains(@href, '/')]", "xpath:href"],
+        ["xpath=//a", "xpath:position"],
+        ["xpath=//a[contains(.,'Home')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "28aedaa2-539d-4603-9950-98bae9802258",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "css=img[src = '/images/sinatra.jpg']",
+      "targets": [
+        ["css=img:nth-child(2)", "css:finder"],
+        ["xpath=//img[@alt='Frank Sinatra']", "xpath:img"],
+        ["xpath=//section/img", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "184a9b15-5093-4d62-ae6a-ee4e2e0f3a0a",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "css=a[href='/login']",
+      "targets": [
+        ["linkText=log out", "linkText"],
+        ["css=footer > a", "css:finder"],
+        ["xpath=//a[contains(text(),'log out')]", "xpath:link"],
+        ["xpath=//a[contains(@href, '/logout')]", "xpath:href"],
+        ["xpath=//footer/a", "xpath:position"],
+        ["xpath=//a[contains(.,'log out')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "db48e01d-1623-4c19-afdb-682118c13817",
+      "comment": "",
+      "command": "waitForElementVisible",
+      "target": "linkText=log in",
+      "targets": [],
+      "value": "30000"
+    }, {
+      "id": "4bf426a5-e781-4860-929f-c4de687c9b7d",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=log in",
+      "targets": [
+        ["linkText=log in", "linkText"],
+        ["css=footer > a", "css:finder"],
+        ["xpath=//a[contains(text(),'log in')]", "xpath:link"],
+        ["xpath=//a[contains(@href, '/login')]", "xpath:href"],
+        ["xpath=//footer/a", "xpath:position"],
+        ["xpath=//a[contains(.,'log in')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "e458e017-6018-4b2f-ac09-0588c43e1338",
+      "comment": "",
+      "command": "click",
+      "target": "id=username",
+      "targets": [
+        ["id=username", "id"],
+        ["name=username", "name"],
+        ["css=#username", "css:finder"],
+        ["xpath=//input[@id='username']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "2bad611f-e6ef-4cad-8569-e1b5c544f0e8",
+      "comment": "",
+      "command": "type",
+      "target": "id=username",
+      "targets": [
+        ["id=username", "id"],
+        ["name=username", "name"],
+        ["css=#username", "css:finder"],
+        ["xpath=//input[@id='username']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "frank"
+    }, {
+      "id": "71bdee70-9e4e-4982-be0f-d2c865bcdfb7",
+      "comment": "",
+      "command": "type",
+      "target": "id=password",
+      "targets": [
+        ["id=password", "id"],
+        ["name=password", "name"],
+        ["css=#password", "css:finder"],
+        ["xpath=//input[@id='password']", "xpath:attributes"],
+        ["xpath=//input[2]", "xpath:position"]
+      ],
+      "value": "sinatra"
+    }, {
+      "id": "684ca5e4-cbeb-4fb5-9b39-b8aea6e99f7b",
+      "comment": "",
+      "command": "click",
+      "target": "css=input[value='Log In']",
+      "targets": [
+        ["css=input:nth-child(5)", "css:finder"],
+        ["xpath=//input[@value='Log In']", "xpath:attributes"],
+        ["xpath=//input[3]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "97914e7a-8ced-4126-a828-3d80782fee52",
+      "comment": "",
+      "command": "waitForElementPresent",
+      "target": "css=a[href='/logout']",
+      "targets": [],
+      "value": "30000"
+    }, {
+      "id": "ec3c123f-81bf-47bf-a4ea-411fbe1cbf5b",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "css=div[id='flash']",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "bab78acf-5991-43af-a37d-be94ce35e4e8",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "css=a[href='/logout']",
+      "targets": [],
+      "value": "log out"
+    }]
+  }, {
+    "id": "fe7022f3-5287-44cf-b5f0-c771a21103c4",
+    "name": "Song",
+    "commands": [{
+      "id": "d64eef28-b80c-4b07-8b89-53c5325da570",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "5534c213-dfeb-470d-aad0-cbf00c7ddfa3",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1280x680",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "66ca5631-800f-4417-a0c4-1ff3497eb989",
+      "comment": "",
+      "command": "click",
+      "target": "css=a[href='/songs']",
+      "targets": [
+        ["linkText=Songs", "linkText"],
+        ["css=li:nth-child(4) > a", "css:finder"],
+        ["xpath=//a[contains(text(),'Songs')]", "xpath:link"],
+        ["xpath=//a[contains(@href, '/songs')]", "xpath:href"],
+        ["xpath=//li[4]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Songs')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "3b340dc1-e2e1-40a2-9465-7b7f79cc2a3b",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "css=a[href='/songs/new']",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "ded3c761-cd0b-4942-8307-ef95c28fb5a3",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=section > h1",
+      "targets": [],
+      "value": "Songs"
+    }, {
+      "id": "d0b0afab-359c-41e7-baca-94f48cf6d0de",
+      "comment": "",
+      "command": "click",
+      "target": "css=a[href='/songs/new']",
+      "targets": [
+        ["linkText=Create a new song", "linkText"],
+        ["css=a:nth-child(2)", "css:finder"],
+        ["xpath=//a[contains(text(),'Create a new song')]", "xpath:link"],
+        ["xpath=//a[contains(@href, '/songs/new')]", "xpath:href"],
+        ["xpath=//section/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Create a new song')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "bab07664-7dda-4bbf-8898-dbb027d441fc",
+      "comment": "",
+      "command": "click",
+      "target": "id=title",
+      "targets": [
+        ["id=title", "id"],
+        ["name=song[title]", "name"],
+        ["css=#title", "css:finder"],
+        ["xpath=//input[@id='title']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "9af4633b-94b5-4597-9bdf-d4611b02e446",
+      "comment": "",
+      "command": "type",
+      "target": "id=title",
+      "targets": [
+        ["id=title", "id"],
+        ["name=song[title]", "name"],
+        ["css=#title", "css:finder"],
+        ["xpath=//input[@id='title']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "Titulo2"
+    }, {
+      "id": "bbd1c9e6-647f-4dd4-a28a-3112982cab37",
+      "comment": "",
+      "command": "type",
+      "target": "id=length",
+      "targets": [
+        ["id=length", "id"],
+        ["name=song[length]", "name"],
+        ["css=#length", "css:finder"],
+        ["xpath=//input[@id='length']", "xpath:attributes"],
+        ["xpath=//input[2]", "xpath:position"]
+      ],
+      "value": "10"
+    }, {
+      "id": "a58b4876-633e-43d8-b720-9c03309148c8",
+      "comment": "",
+      "command": "type",
+      "target": "id=released_on",
+      "targets": [
+        ["id=released_on", "id"],
+        ["name=song[released_on]", "name"],
+        ["css=#released_on", "css:finder"],
+        ["xpath=//input[@id='released_on']", "xpath:attributes"],
+        ["xpath=//input[3]", "xpath:position"]
+      ],
+      "value": "06/22/2020"
+    }, {
+      "id": "8ad076ae-fceb-4a05-84bd-bebfb24c43f6",
+      "comment": "",
+      "command": "type",
+      "target": "id=lyrics",
+      "targets": [
+        ["id=lyrics", "id"],
+        ["name=song[lyrics]", "name"],
+        ["css=#lyrics", "css:finder"],
+        ["xpath=//textarea[@id='lyrics']", "xpath:attributes"],
+        ["xpath=//textarea", "xpath:position"]
+      ],
+      "value": "hola2"
+    }, {
+      "id": "65d6adcd-bfd5-4947-948e-f3388a942c39",
+      "comment": "",
+      "command": "click",
+      "target": "css=input:nth-child(9)",
+      "targets": [
+        ["css=input:nth-child(9)", "css:finder"],
+        ["xpath=//input[@value='Save Song']", "xpath:attributes"],
+        ["xpath=//input[4]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "1b951581-0339-47bb-aa21-712e4300bcac",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "css=div[id='flash']",
+      "targets": [],
+      "value": ""
+    }]
+  }, {
+    "id": "6fbac8a9-cd85-49f1-9748-cd5fcb2283ab",
+    "name": "Editar",
+    "commands": [{
+      "id": "64241c6f-9ffe-40f5-8d54-0a893496ae3c",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "bc46b394-9ea5-4bcd-a029-38cc7ed0d438",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1280x680",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "bc736745-b25a-49ca-8724-db4847224769",
+      "comment": "",
+      "command": "click",
+      "target": "css=a[href='/songs']",
+      "targets": [
+        ["linkText=Songs", "linkText"],
+        ["css=li:nth-child(4) > a", "css:finder"],
+        ["xpath=//a[contains(text(),'Songs')]", "xpath:link"],
+        ["xpath=//a[contains(@href, '/songs')]", "xpath:href"],
+        ["xpath=//li[4]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Songs')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "1a16e7af-33de-40df-a50a-0d04b7967755",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=section > h1",
+      "targets": [],
+      "value": "Songs"
+    }, {
+      "id": "be3c5147-0aee-4550-a1e8-6a9aa11301ba",
+      "comment": "",
+      "command": "click",
+      "target": "css=a[href='/songs/5']",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "68fc07b2-bfaa-497f-9df8-0324af04bc81",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "xpath=//a[contains(text(),'edit this song')]",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "32f58aa0-9731-4d91-be92-12d2ccdc1d7f",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//a[contains(text(),'edit this song')]",
+      "targets": [
+        ["linkText=edit this song", "linkText"],
+        ["css=p:nth-child(7) > a", "css:finder"],
+        ["xpath=//a[contains(text(),'edit this song')]", "xpath:link"],
+        ["xpath=//a[contains(@href, '/songs/10/edit')]", "xpath:href"],
+        ["xpath=//p[4]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'edit this song')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "88d6a1ba-e11d-4780-8ccd-0c0dbb60d25b",
+      "comment": "",
+      "command": "click",
+      "target": "id=title",
+      "targets": [
+        ["id=title", "id"],
+        ["name=song[title]", "name"],
+        ["css=#title", "css:finder"],
+        ["xpath=//input[@id='title']", "xpath:attributes"],
+        ["xpath=//input[2]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "aada954a-110d-459c-8c03-d39a87b8c266",
+      "comment": "",
+      "command": "click",
+      "target": "id=title",
+      "targets": [
+        ["id=title", "id"],
+        ["name=song[title]", "name"],
+        ["css=#title", "css:finder"],
+        ["xpath=//input[@id='title']", "xpath:attributes"],
+        ["xpath=//input[2]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "b7e1a20b-75f7-4eb5-b314-ebc7064e7abc",
+      "comment": "",
+      "command": "doubleClick",
+      "target": "id=title",
+      "targets": [
+        ["id=title", "id"],
+        ["name=song[title]", "name"],
+        ["css=#title", "css:finder"],
+        ["xpath=//input[@id='title']", "xpath:attributes"],
+        ["xpath=//input[2]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "bc9c10eb-ef03-46c8-957b-d94cc8c66aea",
+      "comment": "",
+      "command": "click",
+      "target": "id=title",
+      "targets": [
+        ["id=title", "id"],
+        ["name=song[title]", "name"],
+        ["css=#title", "css:finder"],
+        ["xpath=//input[@id='title']", "xpath:attributes"],
+        ["xpath=//input[2]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "da65ff20-cc80-4c7a-89ed-cfb7477ae08e",
+      "comment": "",
+      "command": "type",
+      "target": "id=title",
+      "targets": [
+        ["id=title", "id"],
+        ["name=song[title]", "name"],
+        ["css=#title", "css:finder"],
+        ["xpath=//input[@id='title']", "xpath:attributes"],
+        ["xpath=//input[2]", "xpath:position"]
+      ],
+      "value": "Editar2"
+    }, {
+      "id": "1039794a-e4f6-49ec-bf0c-513531bb1cf8",
+      "comment": "",
+      "command": "click",
+      "target": "css=input:nth-child(10)",
+      "targets": [
+        ["css=input:nth-child(10)", "css:finder"],
+        ["xpath=//input[@value='Save Song']", "xpath:attributes"],
+        ["xpath=//input[5]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "a3b87d9d-2fde-467c-86fd-4819a8ab328a",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "css=div[id='flash']",
+      "targets": [],
+      "value": ""
+    }]
+  }, {
+    "id": "6f3889aa-0318-4e1a-9950-518af209f5cf",
+    "name": "Like",
+    "commands": [{
+      "id": "bc3abeb6-c07a-4f67-a8bb-39f16416a5fe",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "7f0f92f4-9508-4795-bd29-f8c0815961cc",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1280x680",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "5a726b19-52d9-46fa-8708-d241b480056f",
+      "comment": "",
+      "command": "click",
+      "target": "css=a[href='/songs']",
+      "targets": [
+        ["linkText=Songs", "linkText"],
+        ["css=li:nth-child(4) > a", "css:finder"],
+        ["xpath=//a[contains(text(),'Songs')]", "xpath:link"],
+        ["xpath=//a[contains(@href, '/songs')]", "xpath:href"],
+        ["xpath=//li[4]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Songs')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "20bca129-27c1-4376-bd65-d14e8ccb973f",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=section > h1",
+      "targets": [],
+      "value": "Songs"
+    }, {
+      "id": "f677894a-93b2-4e03-b6e5-914bb1df6379",
+      "comment": "",
+      "command": "click",
+      "target": "css=a[href='/songs/21']",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "c09f004d-dfe5-4966-a40d-094ced8aa76c",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "css=input[value='Like']",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "94afa352-26e0-4b18-bc0d-6467ce2f489a",
+      "comment": "",
+      "command": "click",
+      "target": "css=input[value='Like']",
+      "targets": [
+        ["css=form:nth-child(2) > input", "css:finder"],
+        ["xpath=//input[@value='Like']", "xpath:attributes"],
+        ["xpath=//div[@id='like']/form/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }]
+  }],
+  "suites": [{
+    "id": "08fc0fe5-e973-4193-aa14-e82c1b713061",
+    "name": "Login",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["8b193018-1550-4d67-9e00-86185ab5f88b"]
+  }, {
+    "id": "a5dea7f4-da87-4791-beb1-7bae2d6db4a7",
+    "name": "Song",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["fe7022f3-5287-44cf-b5f0-c771a21103c4", "6fbac8a9-cd85-49f1-9748-cd5fcb2283ab", "6f3889aa-0318-4e1a-9950-518af209f5cf"]
+  }],
+  "urls": ["https://evening-bastion-49392.herokuapp.com/"],
+  "plugins": []
+}
